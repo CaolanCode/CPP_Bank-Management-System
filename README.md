@@ -1,6 +1,6 @@
 # Bank Management System in C++
 
-## Programs Function
+## Functions of the program 
 - Create Account
 - Show Account Details
 - Deposit
