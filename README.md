@@ -1,1 +1,7 @@
-# CPP_Bank-Management-System
+# Bank Management System in C++
+
+## Programs Function
+- Create Account
+- Show Account Details
+- Deposit
+- Withdraw
