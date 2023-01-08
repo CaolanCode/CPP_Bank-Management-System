@@ -21,10 +21,8 @@ public:
     }
     void createAccout();
     void displayInfo();
-    
-    // Accessors
-    double get_balance(){ return balance; }
-    int get_accountNumber(){return accountNumber; }
+    void withdraw();
+    void deposit();
     
 };
 
@@ -44,6 +42,22 @@ void Account::displayInfo()
     cout << "Balance : €" << setprecision(2) << fixed << balance << endl;
 }
 
+void Account::withdraw()
+{
+    double amount;
+    cout << "How much would you like to withdraw?: ";
+    cin >> amount;
+    balance -= amount;
+}
+
+void Account::deposit()
+{
+    double amount;
+    cout << "How much would you like to deposit?: ";
+    cin >> amount;
+    balance += amount;
+}
+
 int account_number()
 {
     static int accountNumber = 1;
@@ -54,7 +68,9 @@ int main() {
     Account accOne;
     
     accOne.createAccout();
-    
+    accOne.displayInfo();
+    accOne.deposit();
+    accOne.withdraw();
     accOne.displayInfo();
     
     return 0;
