@@ -24,7 +24,7 @@ public:
     ~Account() {cout << "Account deleted.\n";}
     // define member functions
     void createAccout();
-    void displayInfo();
+    void displayInfo() const;
     void withdraw();
     void deposit();
 };
@@ -38,7 +38,7 @@ void Account::createAccout()
     cin.getline(address, 100);
 }
 
-void Account::displayInfo()
+void Account::displayInfo() const
 {
     cout << "\nAccount number: " << accountNumber << endl;
     cout << "Full name: " << name << endl;
