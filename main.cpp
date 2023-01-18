@@ -30,10 +30,9 @@ public:
     void deposit();
 };
 
-Account::Account()
+Account::Account(): balance(0.00)
 {
     accountNumber = account_number();
-    balance = 0.00;
 }
 
 void Account::createAccout()
