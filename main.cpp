@@ -20,11 +20,7 @@ class Account
     int accountNumber;
 public:
     // constructor
-    Account()
-    {
-        accountNumber = account_number();
-        balance = 0.00;
-    }
+    Account();
     // destructor
     ~Account() {cout << "Account deleted.\n";}
     // define member functions
@@ -33,6 +29,12 @@ public:
     void withdraw();
     void deposit();
 };
+
+Account::Account()
+{
+    accountNumber = account_number();
+    balance = 0.00;
+}
 
 void Account::createAccout()
 {
